@@ -1,5 +1,27 @@
-# Vue 3 + Vite
+# 项目管理（Geeker Admin 版）
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+当前项目已统一基于 **Geeker Admin（Vue3 + Element Plus + ProTable）** 进行融合重构，核心功能为「项目管理」模块。
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## 本地启动
+
+```bash
+pnpm dev
+```
+
+默认地址：`http://localhost:8848/`
+
+## 功能入口
+
+- 项目列表：`/project/list`
+- 项目进度：`/project/progress/:id`
+- 里程碑任务（隐藏路由）：`/project/milestoneTasks/:projectId/:milestoneId`
+- 任务详情（隐藏路由）：`/project/taskDetail/:projectId/:taskId`
+
+## 目录说明
+
+- Geeker Admin 主工程：`geeker-admin/`
+- 项目管理页面：
+  - `geeker-admin/src/views/project/list`
+  - `geeker-admin/src/views/project/progress`
+  - `geeker-admin/src/views/project/milestoneTasks`
+  - `geeker-admin/src/views/project/taskDetail`
