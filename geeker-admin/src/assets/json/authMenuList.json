@@ -1,0 +1,159 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "path": "/home/index",
+      "name": "home",
+      "component": "/home/index",
+      "meta": {
+        "icon": "HomeFilled",
+        "title": "首页",
+        "isLink": "",
+        "isHide": true,
+        "isFull": false,
+        "isAffix": false,
+        "isKeepAlive": false
+      }
+    },
+    {
+      "path": "/project",
+      "name": "project",
+      "component": "/layout/index",
+      "redirect": "/project/list",
+      "meta": {
+        "icon": "FolderOpened",
+        "title": "项目管理",
+        "isLink": "",
+        "isHide": false,
+        "isFull": false,
+        "isAffix": false,
+        "isKeepAlive": true
+      },
+      "children": [
+        {
+          "path": "/project/list",
+          "name": "projectList",
+          "component": "/project/list/index",
+          "meta": {
+            "icon": "List",
+            "title": "项目列表",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": true,
+            "isKeepAlive": false
+          }
+        },
+        {
+          "path": "/project/detail/:id",
+          "name": "projectDetail",
+          "component": "/project/detail/layout",
+          "redirect": "/project/detail/:id/overview",
+          "meta": {
+            "icon": "Histogram",
+            "title": "项目详情",
+            "activeMenu": "/project/list",
+            "isLink": "",
+            "isHide": true,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": false
+          },
+          "children": [
+            {
+              "path": "/project/detail/:id/overview",
+              "name": "projectOverview",
+              "component": "/project/detail/progress/index",
+              "meta": {
+                "icon": "DataBoard",
+                "title": "项目总览",
+                "activeMenu": "/project/list",
+                "isLink": "",
+                "isHide": true,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": false
+              }
+            },
+            {
+              "path": "/project/detail/:id/progress",
+              "name": "projectProgress",
+              "component": "/project/detail/progress/index",
+              "meta": {
+                "icon": "TrendCharts",
+                "title": "项目详情",
+                "activeMenu": "/project/list",
+                "isLink": "",
+                "isHide": true,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": false
+              }
+            },
+            {
+              "path": "/project/detail/:id/milestone-settings",
+              "name": "projectMilestoneSettings",
+              "component": "/project/detail/milestones/settings/index",
+              "meta": {
+                "icon": "Setting",
+                "title": "里程碑设置",
+                "activeMenu": "/project/list",
+                "isLink": "",
+                "isHide": true,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": false
+              }
+            },
+            {
+              "path": "/project/detail/:id/requirements",
+              "name": "projectRequirements",
+              "component": "/project/detail/progress/index",
+              "meta": {
+                "icon": "List",
+                "title": "需求管理",
+                "activeMenu": "/project/list",
+                "isLink": "",
+                "isHide": true,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": false
+              }
+            }
+          ]
+        },
+        {
+          "path": "/project/milestoneTasks/:projectId/:milestoneId",
+          "name": "projectMilestoneTasks",
+          "component": "/project/milestoneTasks/index",
+          "meta": {
+            "icon": "Menu",
+            "title": "任务列表",
+            "activeMenu": "/project/list",
+            "isLink": "",
+            "isHide": true,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": false
+          }
+        },
+        {
+          "path": "/project/taskDetail/:projectId/:taskId",
+          "name": "projectTaskDetail",
+          "component": "/project/taskDetail/index",
+          "meta": {
+            "icon": "Menu",
+            "title": "任务详情",
+            "activeMenu": "/project/list",
+            "isLink": "",
+            "isHide": true,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": false
+          }
+        }
+      ]
+    }
+  ],
+  "msg": "成功"
+}
